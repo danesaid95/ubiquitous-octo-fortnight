@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Calendar, Send, Check, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Calendar, Send, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site-config";
 
@@ -304,7 +304,7 @@ export default function ContactPage() {
                   Skip the back-and-forth. Book a time that works for you and
                   we&apos;ll dive into your growth goals.
                 </p>
-                <Button href="#" className="w-full">
+                <Button href={siteConfig.calendlyUrl} className="w-full">
                   Book Free Strategy Call
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -332,20 +332,6 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-[#39FF14]/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-[#39FF14]" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-white/40 mb-1">Phone</div>
-                      <a
-                        href={`tel:${siteConfig.contact.phone.replace(/\D/g, "")}`}
-                        className="text-white hover:text-[#39FF14] transition-colors"
-                      >
-                        {siteConfig.contact.phone}
-                      </a>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#39FF14]/10 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 text-[#39FF14]" />
                     </div>
                     <div>
@@ -353,9 +339,9 @@ export default function ContactPage() {
                       <address className="text-white not-italic">
                         {siteConfig.contact.address.street}
                         <br />
-                        {siteConfig.contact.address.city},{" "}
-                        {siteConfig.contact.address.state}{" "}
-                        {siteConfig.contact.address.zip}
+                        {siteConfig.contact.address.postalCode}, {siteConfig.contact.address.city}
+                        <br />
+                        {siteConfig.contact.address.country}
                       </address>
                     </div>
                   </li>

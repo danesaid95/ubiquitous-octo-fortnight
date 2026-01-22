@@ -11,7 +11,7 @@ import {
   Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { services } from "@/data/site-config";
+import { services, siteConfig } from "@/data/site-config";
 
 const iconMap = {
   Users,
@@ -406,7 +406,7 @@ export default function ServicesPage() {
               Let&apos;s build a growth strategy tailored to your brand. Book a
               free call and we&apos;ll show you exactly how we can help.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href={siteConfig.calendlyUrl} size="lg">
               Book Free Strategy Call
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

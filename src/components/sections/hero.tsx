@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/data/site-config";
 
 export function Hero() {
   return (
@@ -56,7 +57,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button href="/contact" size="lg">
+            <Button href={siteConfig.calendlyUrl} size="lg">
               Book a Strategy Call
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

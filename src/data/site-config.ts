@@ -18,14 +18,13 @@ export const siteConfig = {
 
   // Contact
   contact: {
-    email: "hello@nextftd.com",
-    phone: "+1 (888) 639-8384",
+    name: "Dane Said",
+    email: "Dane@NextFTD.com",
     address: {
-      street: "350 Fifth Avenue, Suite 4820",
-      city: "New York",
-      state: "NY",
-      zip: "10118",
-      country: "United States",
+      street: "30, Peirarios, Fl.: 1, Apt.: 1",
+      postalCode: "2023",
+      city: "Strovolos",
+      country: "Cyprus",
     },
   },
 
@@ -40,6 +39,9 @@ export const siteConfig = {
       country: "Cyprus",
     },
   },
+
+  // Booking
+  calendlyUrl: "https://calendly.com/dane-m-said/30min",
 
   // Social Links
   social: {

@@ -6,9 +6,14 @@ const brands = [
   "DAYDREAM",
   "HALARA",
   "ONBUY",
-  "LUMINA",
-  "ZEPHYR",
-  "NOVEX",
+  "RHODE",
+  "MAËLYS",
+  "PHLUR",
+  "SALT & STONE",
+  "PRIMALLY PURE",
+  "SPOILED CHILD",
+  "FUNCTION OF BEAUTY",
+  "DRESSX",
 ];
 
 export function TrustBar() {

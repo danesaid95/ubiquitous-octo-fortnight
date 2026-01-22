@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const brands = [
-  "VERATONE",
-  "FLUXATHLETICA",
+  "DAYDREAM",
+  "HALARA",
+  "ONBUY",
   "LUMINA",
   "ZEPHYR",
   "NOVEX",
-  "PRISMTECH",
 ];
 
 export function TrustBar() {

@@ -25,7 +25,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-[#39FF14] animate-pulse" />
-            Now accepting new partners for Q1 2025
+            Now accepting new partners for Q1 2026
           </motion.div>
 
           {/* Headline */}

@@ -16,12 +16,24 @@ export function Footer() {
 
     setIsLoading(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail("");
+      if (response.ok) {
+        setIsSubscribed(true);
+        setEmail("");
+      }
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const currentYear = new Date().getFullYear();

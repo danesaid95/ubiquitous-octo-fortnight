@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  next-ftd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: next-ftd-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount source code for hot reload
+      - .:/app
+      # Prevent node_modules from being overwritten
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - next-ftd-network
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+networks:
+  next-ftd-network:
+    driver: bridge
